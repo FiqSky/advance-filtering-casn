@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPNS ADV-FILTER</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase App (Core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <!-- Firebase Realtime Database SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>CPNS ADV-FILTER</h1>
+
+        <!-- Filter Container -->
+        <div class="filter-container">
+            <input type="text" id="filterInstitution" placeholder="Filter Institution">
+            <input type="text" id="filterJob" placeholder="Filter Job">
+            <input type="text" id="filterFormation" placeholder="Filter Formation">
+            <input type="text" id="filterLocation" placeholder="Filter Location">                
+            <select id="filterSalaryRange" class="filter-select">
+                <option value="">Filter Salary Range</option>
+                <option value="lowest">Terendah</option>
+                <option value="highest">Terbanyak</option>
+            </select>
+            <select id="filterFormasiJumlah" class="filter-select">                        
+                <option value="">Filter Formasi Jumlah</option>
+                <option value="lowest">Terendah</option>
+                <option value="highest">Terbanyak</option>
+            </select>
+        </div>
+
+        <!-- Tabel untuk menampilkan data -->
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Institution</th>
+                    <th>Job</th>
+                    <th>Formation</th>
+                    <th>Location</th>                
+                    <th>Range Salary</th>
+                    <th>Jumlah Formasi</th>
+                </tr>
+            </thead>
+            <tbody id="dataBody">
+                <!-- Data akan ditampilkan di sini -->
+            </tbody>
+        </table>
+        
+        <!-- Pagination -->
+        <div id="pagination">
+            <button id="prevPage">Previous</button>
+            <span id="currentPage">1</span>
+            <button id="nextPage">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
